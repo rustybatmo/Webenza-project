@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg";
+import "./App.css";
+import Sidenav from "./components/sidenav/sidenav.component";
+import { BrowserRouter, Route } from "react-router-dom";
+import Content from "./content/content";
+import HomepageContent from "./components/content/HomepageContent";
+import DashboardContent from "./components/content/DashboardContent";
+import FriendsContent from "./components/content/FriendsContent";
+import SettingsContent from "./components/content/SettingsContent";
+import InformationContent from "./components/content/informationContent";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Sidenav />
+        <Route exact path="/home-page" component={HomepageContent} />
+        <Route path="/dashboard" component={DashboardContent} />
+        <Route path="/friends" component={FriendsContent} />
+        <Route path="/settings" component={SettingsContent} />
+        <Route path="/item" component={InformationContent} />
+      </div>
+    </BrowserRouter>
   );
 }
 
