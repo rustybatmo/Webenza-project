@@ -1,5 +1,5 @@
 import react from "react";
-import "./App.css";
+import "./content.styles.css";
 
 const HomepageContent = () => {
   return (

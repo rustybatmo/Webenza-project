@@ -24,9 +24,8 @@ class Sidenav extends Component {
         >
           <div class="header">
             <div class="header-menu">
-              <div class="title">PROJECT NAME</div>
-              <div class="sidebar-btn " onClick={this.toggleClass}>
-                <i class="fas fa-bars"></i>
+              <div class="title" onClick={this.toggleClass}>
+                Project name
               </div>
             </div>
           </div>
